@@ -6,7 +6,7 @@ import { heroData } from '../data/portfolioData';
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-[#0b1120] relative overflow-hidden font-sans">
+    <section id="home" className="min-h-screen flex items-center justify-center bg-[#0b1120] relative font-sans">
       {/* Subtle background glow effect */}
       <div className="absolute top-[20%] left-[-10%] w-[500px] h-[500px] bg-blue-900/20 rounded-full blur-[120px] pointer-events-none"></div>
       <div className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-purple-900/10 rounded-full blur-[150px] pointer-events-none"></div>
@@ -36,7 +36,7 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-2xl md:text-4xl font-semibold text-white mb-8"
         >
-          I am a{' '}
+          I am {' '}
           <span className="text-[#3b82f6]">
             <Typewriter
               words={heroData.roles}
