@@ -53,10 +53,10 @@ const SkillCard = ({ name, Icon, color }) => (
     variants={cardVariants}
     whileHover={{ y: -6, scale: 1.06 }}
     transition={{ type: 'spring', stiffness: 280, damping: 20 }}
-    className="group flex flex-col items-center justify-center gap-3 bg-[#111827] border border-gray-800 rounded-2xl p-5 cursor-default hover:border-blue-500/50 hover:bg-[#161d2d] hover:shadow-[0_0_24px_rgba(59,130,246,0.15)] transition-all duration-300"
+    className="group flex flex-col items-center justify-center gap-3 bg-white dark:bg-[#111827] border border-gray-200 dark:border-gray-800 rounded-2xl p-5 cursor-default hover:border-blue-500/50 hover:bg-gray-50 dark:hover:bg-[#161d2d] hover:shadow-[0_0_24px_rgba(59,130,246,0.15)] transition-all duration-300"
   >
     <Icon size={40} style={{ color }} className="transition-transform duration-300 group-hover:scale-110 drop-shadow-sm" />
-    <span className="text-sm font-medium text-gray-300 group-hover:text-white transition-colors duration-200 text-center leading-tight">
+    <span className="text-sm font-medium text-gray-600 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors duration-200 text-center leading-tight">
       {name}
     </span>
   </motion.div>
@@ -64,7 +64,7 @@ const SkillCard = ({ name, Icon, color }) => (
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-24 bg-[#0b1120] text-gray-300 relative font-sans">
+    <section id="skills" className="py-24 bg-transparent text-gray-600 dark:text-gray-300 relative font-sans transition-colors">
       {/* Background glow orbs */}
       <div className="absolute top-1/3 right-[-5%] w-[400px] h-[400px] bg-blue-900/10 rounded-full blur-[130px] pointer-events-none" />
       <div className="absolute bottom-0 left-[-5%] w-[350px] h-[350px] bg-purple-900/10 rounded-full blur-[130px] pointer-events-none" />
@@ -77,7 +77,7 @@ const Skills = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-4xl md:text-5xl font-bold text-white mb-4"
+            className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 transition-colors"
           >
             My Skills
           </motion.h2>
@@ -93,7 +93,7 @@ const Skills = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="text-gray-400 text-base md:text-lg text-center max-w-xl"
+            className="text-gray-600 dark:text-gray-400 text-base md:text-lg text-center max-w-xl transition-colors"
           >
             These are the technologies and tools I work with to bring ideas to life.
           </motion.p>

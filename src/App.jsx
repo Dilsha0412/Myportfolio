@@ -10,7 +10,7 @@ import './App.css';
 
 function App() {
   return (
-    <div className="antialiased bg-[#0b1120] min-h-screen text-gray-200">
+    <div className="antialiased bg-gray-50 dark:bg-[#0b1120] transition-colors min-h-screen text-gray-900 dark:text-gray-200">
       <Navbar />
       <Hero />
       <About />

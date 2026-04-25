@@ -25,23 +25,14 @@
   animation-delay: 4s;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-bg: #0f172a;
-    --color-text: #f8fafc;
-    --color-primary: #c084fc;
-  }
-}
+@custom-variant dark (&:where(.dark, .dark *));
 
 body {
   margin: 0;
   overflow-x: hidden;
-  background-color: var(--color-bg);
-  color: var(--color-text);
   font-family: system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
-
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;

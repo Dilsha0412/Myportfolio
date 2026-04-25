@@ -11,7 +11,7 @@ const Projects = () => {
   );
 
   return (
-    <section id="projects" className="py-20 relative bg-[#0b1120]">
+    <section id="projects" className="py-20 relative bg-gray-50 dark:bg-transparent transition-colors">
       {/* Container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -22,7 +22,7 @@ const Projects = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-4xl md:text-5xl font-bold text-white mb-4"
+            className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 transition-colors"
           >
             {projectsData.title}
           </motion.h2>
@@ -44,7 +44,7 @@ const Projects = () => {
               className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                 filter === cat 
                   ? 'bg-blue-500 text-white shadow-[0_0_15px_rgba(59,130,246,0.5)]' 
-                  : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
+                  : 'bg-gray-200 dark:bg-slate-800 text-gray-600 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-slate-700'
               }`}
             >
               {cat}
@@ -66,10 +66,10 @@ const Projects = () => {
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3 }}
                 key={project.id}
-                className="bg-[#0f172a] rounded-2xl overflow-hidden border border-gray-800/50 hover:border-blue-500/30 group transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/10 flex flex-col"
+                className="bg-white dark:bg-[#0f172a] rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800/50 hover:border-blue-500/30 group transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/10 flex flex-col"
               >
                 {/* Image Container */}
-                <div className="relative aspect-video overflow-hidden bg-slate-800">
+                <div className="relative aspect-video overflow-hidden bg-gray-100 dark:bg-slate-800 transition-colors">
                   <img 
                     src={project.image} 
                     alt={project.title} 
@@ -108,10 +108,10 @@ const Projects = () => {
                   <div className="text-blue-500 text-sm font-bold tracking-wider mb-2 uppercase">
                     {project.category}
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-4">
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 transition-colors">
                     {project.title}
                   </h3>
-                  <p className="text-gray-400 mb-6 line-clamp-3 flex-1">
+                  <p className="text-gray-600 dark:text-gray-400 mb-6 line-clamp-3 flex-1 transition-colors">
                     {project.description}
                   </p>
                   
@@ -120,7 +120,7 @@ const Projects = () => {
                     {project.tech.map((tech, i) => (
                       <span 
                         key={i}
-                        className="px-3 py-1 text-sm bg-slate-800/50 text-gray-300 rounded-full"
+                        className="px-3 py-1 text-sm bg-gray-100 dark:bg-slate-800/50 text-gray-600 dark:text-gray-300 rounded-full transition-colors"
                       >
                         {tech}
                       </span>

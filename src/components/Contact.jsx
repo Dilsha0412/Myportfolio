@@ -11,7 +11,7 @@ const iconMap = {
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-20 relative bg-[#0b1120]">
+    <section id="contact" className="py-20 relative bg-white dark:bg-transparent transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
@@ -21,7 +21,7 @@ const Contact = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-4xl md:text-5xl font-bold text-white mb-4"
+            className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 transition-colors"
           >
             {contactData.title}
           </motion.h2>
@@ -37,7 +37,7 @@ const Contact = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="text-gray-400 max-w-2xl mx-auto"
+            className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto transition-colors"
           >
             {contactData.subtitle}
           </motion.p>
@@ -52,9 +52,9 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="bg-[#0f172a] rounded-2xl p-8 border border-gray-800/50 lg:col-span-1"
+            className="bg-gray-50 dark:bg-[#0f172a] rounded-2xl p-8 border border-gray-200 dark:border-gray-800/50 lg:col-span-1 transition-colors"
           >
-            <h3 className="text-2xl font-bold text-white mb-8">Contact Information</h3>
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 transition-colors">Contact Information</h3>
             
             <div className="space-y-6 mb-12">
               <div className="flex items-start gap-4">
@@ -62,8 +62,8 @@ const Contact = () => {
                   <FaEnvelope size={24} />
                 </div>
                 <div>
-                  <p className="text-sm text-gray-400 font-medium tracking-wider mb-1 uppercase">Email</p>
-                  <p className="text-white font-medium break-all">{contactData.email}</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400 font-medium tracking-wider mb-1 uppercase transition-colors">Email</p>
+                  <p className="text-gray-900 dark:text-white font-medium break-all transition-colors">{contactData.email}</p>
                 </div>
               </div>
               
@@ -72,8 +72,8 @@ const Contact = () => {
                   <FaPhoneAlt size={24} />
                 </div>
                 <div>
-                  <p className="text-sm text-gray-400 font-medium tracking-wider mb-1 uppercase">Phone</p>
-                  <p className="text-white font-medium">{contactData.phone}</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400 font-medium tracking-wider mb-1 uppercase transition-colors">Phone</p>
+                  <p className="text-gray-900 dark:text-white font-medium transition-colors">{contactData.phone}</p>
                 </div>
               </div>
 
@@ -82,14 +82,14 @@ const Contact = () => {
                   <FaMapMarkerAlt size={24} />
                 </div>
                 <div>
-                  <p className="text-sm text-gray-400 font-medium tracking-wider mb-1 uppercase">Location</p>
-                  <p className="text-white font-medium">{contactData.location}</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400 font-medium tracking-wider mb-1 uppercase transition-colors">Location</p>
+                  <p className="text-gray-900 dark:text-white font-medium transition-colors">{contactData.location}</p>
                 </div>
               </div>
             </div>
 
             <div>
-              <p className="text-sm text-gray-400 font-medium tracking-wider mb-4 uppercase">Follow Me</p>
+              <p className="text-sm text-gray-500 dark:text-gray-400 font-medium tracking-wider mb-4 uppercase transition-colors">Follow Me</p>
               <div className="flex gap-4">
                 {contactData.socialLinks.map((social, index) => (
                   <a 
@@ -97,7 +97,7 @@ const Contact = () => {
                     href={social.url} 
                     target="_blank" 
                     rel="noreferrer"
-                    className="p-3 bg-slate-800 rounded-xl text-gray-400 hover:text-white hover:bg-slate-700 transition-colors"
+                    className="p-3 bg-gray-200 dark:bg-slate-800 rounded-xl text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-300 dark:hover:bg-slate-700 transition-colors"
                   >
                     {iconMap[social.icon]}
                   </a>
@@ -112,47 +112,47 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="bg-[#0f172a] rounded-2xl p-8 border border-gray-800/50 lg:col-span-2"
+            className="bg-gray-50 dark:bg-[#0f172a] rounded-2xl p-8 border border-gray-200 dark:border-gray-800/50 lg:col-span-2 transition-colors"
           >
             <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-2">Your Name</label>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-600 dark:text-gray-400 mb-2 transition-colors">Your Name</label>
                   <input 
                     type="text" 
                     id="name" 
                     placeholder="John Doe"
-                    className="w-full bg-slate-800/50 border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                    className="w-full bg-white dark:bg-slate-800/50 border border-gray-300 dark:border-gray-700 rounded-xl px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-400 mb-2">Your Email</label>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-600 dark:text-gray-400 mb-2 transition-colors">Your Email</label>
                   <input 
                     type="email" 
                     id="email" 
                     placeholder="john@example.com"
-                    className="w-full bg-slate-800/50 border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                    className="w-full bg-white dark:bg-slate-800/50 border border-gray-300 dark:border-gray-700 rounded-xl px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                   />
                 </div>
               </div>
               
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-400 mb-2">Subject</label>
+                <label htmlFor="subject" className="block text-sm font-medium text-gray-600 dark:text-gray-400 mb-2 transition-colors">Subject</label>
                 <input 
                   type="text" 
                   id="subject" 
                   placeholder="How can I help you?"
-                  className="w-full bg-slate-800/50 border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                  className="w-full bg-white dark:bg-slate-800/50 border border-gray-300 dark:border-gray-700 rounded-xl px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-400 mb-2">Message</label>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-600 dark:text-gray-400 mb-2 transition-colors">Message</label>
                 <textarea 
                   id="message" 
                   rows="5"
                   placeholder="Write your message here..."
-                  className="w-full bg-slate-800/50 border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
+                  className="w-full bg-white dark:bg-slate-800/50 border border-gray-300 dark:border-gray-700 rounded-xl px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
                 ></textarea>
               </div>
 
