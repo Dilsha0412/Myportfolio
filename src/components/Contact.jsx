@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaGithub, FaLinkedin, FaTwitter, FaCheckCircle } from 'react-icons/fa';
 import { contactData } from '../data/portfolioData';
 
 const iconMap = {
@@ -10,6 +10,43 @@ const iconMap = {
 };
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({ ...prev, [id]: value }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    // Format the email body
+    const emailBody = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
+    const mailtoLink = `mailto:${contactData.email}?subject=${encodeURIComponent(formData.subject || 'Portfolio Contact')}&body=${encodeURIComponent(emailBody)}`;
+    
+    // Simulate a brief loading state for UX
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setShowSuccess(true);
+      // Open the user's default email client
+      window.location.href = mailtoLink;
+      
+      // Clear the form after a short delay
+      setTimeout(() => {
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        setShowSuccess(false);
+      }, 3000);
+    }, 800);
+  };
+
   return (
     <section id="contact" className="py-20 relative bg-white dark:bg-transparent transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -112,15 +149,32 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="bg-gray-50 dark:bg-[#0f172a] rounded-2xl p-8 border border-gray-200 dark:border-gray-800/50 lg:col-span-2 transition-colors"
+            className="bg-gray-50 dark:bg-[#0f172a] rounded-2xl p-8 border border-gray-200 dark:border-gray-800/50 lg:col-span-2 transition-colors relative overflow-hidden"
           >
-            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+            <AnimatePresence>
+              {showSuccess && (
+                <motion.div 
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  className="absolute top-0 left-0 right-0 bg-green-500/10 border-b border-green-500/20 p-4 flex items-center justify-center gap-3 text-green-600 dark:text-green-400"
+                >
+                  <FaCheckCircle size={20} />
+                  <span className="font-medium">Opening your email client...</span>
+                </motion.div>
+              )}
+            </AnimatePresence>
+
+            <form className={`space-y-6 ${showSuccess ? 'mt-12' : ''} transition-all duration-300`} onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-600 dark:text-gray-400 mb-2 transition-colors">Your Name</label>
                   <input 
                     type="text" 
                     id="name" 
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
                     placeholder="John Doe"
                     className="w-full bg-white dark:bg-slate-800/50 border border-gray-300 dark:border-gray-700 rounded-xl px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                   />
@@ -130,6 +184,9 @@ const Contact = () => {
                   <input 
                     type="email" 
                     id="email" 
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
                     placeholder="john@example.com"
                     className="w-full bg-white dark:bg-slate-800/50 border border-gray-300 dark:border-gray-700 rounded-xl px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                   />
@@ -141,6 +198,9 @@ const Contact = () => {
                 <input 
                   type="text" 
                   id="subject" 
+                  value={formData.subject}
+                  onChange={handleChange}
+                  required
                   placeholder="How can I help you?"
                   className="w-full bg-white dark:bg-slate-800/50 border border-gray-300 dark:border-gray-700 rounded-xl px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                 />
@@ -150,6 +210,9 @@ const Contact = () => {
                 <label htmlFor="message" className="block text-sm font-medium text-gray-600 dark:text-gray-400 mb-2 transition-colors">Message</label>
                 <textarea 
                   id="message" 
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
                   rows="5"
                   placeholder="Write your message here..."
                   className="w-full bg-white dark:bg-slate-800/50 border border-gray-300 dark:border-gray-700 rounded-xl px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
@@ -158,9 +221,20 @@ const Contact = () => {
 
               <button 
                 type="submit"
-                className="bg-blue-500 text-white font-medium px-8 py-3 rounded-xl hover:bg-blue-600 transition-colors shadow-[0_0_15px_rgba(59,130,246,0.3)] hover:shadow-[0_0_20px_rgba(59,130,246,0.5)]"
+                disabled={isSubmitting}
+                className="bg-blue-500 text-white font-medium px-8 py-3 rounded-xl hover:bg-blue-600 transition-colors shadow-[0_0_15px_rgba(59,130,246,0.3)] hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] disabled:opacity-70 disabled:cursor-not-allowed flex items-center gap-2"
               >
-                Send Message
+                {isSubmitting ? (
+                  <>
+                    <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Processing...
+                  </>
+                ) : (
+                  'Send Message'
+                )}
               </button>
             </form>
           </motion.div>
@@ -172,3 +246,4 @@ const Contact = () => {
 };
 
 export default Contact;
+

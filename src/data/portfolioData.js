@@ -71,35 +71,35 @@ export const projectsData = {
   projects: [
     {
       id: 1,
-      title: "SaaS Analytics Dashboard",
+      title: "Rabbit - Ecommerce Website with MERN",
       category: "Full Stack",
-      description: "A comprehensive analytics dashboard for SaaS companies to track user engagement, MRR, and churn rates in real-time.",
+      description: "A modern e-commerce platform for browsing, managing, and purchasing products with a seamless user experience.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
-      tech: ["React", "Tailwind", "Node.js", "MongoDB"],
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com"
+      tech: ["React", "Tailwind", "Express.js", "MongoDB"],
+      githubUrl: "https://github.com/Dilsha0412/Rabbit-Ecommerce.git",
+      //liveUrl: "https://example.com"
     },
     {
       id: 2,
-      title: "E-Commerce Storefront",
+      title: "Sport Item Website",
       category: "Frontend",
-      description: "A headless e-commerce storefront with lightning-fast page loads, persistent cart, and seamless checkout experience.",
+      description: "A simple e-commerce website for browsing and purchasing sports items with a modern and responsive interface.",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop",
-      tech: ["Next.js", "TypeScript", "Tailwind"],
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com"
+      tech: ["HTML", "CSS", "JavaScript"],
+      githubUrl: "https://github.com/Dilsha0412/Sport-Item-Website-Frontend.git",
+      //liveUrl: "https://example.com"
     },
     {
       id: 3,
-      title: "Real-time Chat Application",
-      category: "Full Stack",
-      description: "A real-time messaging platform with rooms, typing indicators, and message history.",
-      image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1974&auto=format&fit=crop",
-      tech: ["React", "Socket.io", "Node.js", "Express"],
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com"
+      title: "Coffee Shop Website ",
+      category: "Frontend",
+      description: "A simple coffee shop website for browsing and purchasing coffee items with a modern and responsive interface.",
+      image: "https://images.unsplash.com/photo-1572584668474-361465c37c2d?q=80&w=2070&auto=format&fit=crop",
+      tech: ["HTML", "CSS", "JavaScript"],
+      githubUrl: "https://github.com/Dilsha0412/Coffee--Shop.git",
+      //liveUrl: "https://example.com"
     },
-    {
+   /* {
       id: 4,
       title: "Portfolio Template",
       category: "Frontend",
@@ -108,16 +108,16 @@ export const projectsData = {
       tech: ["React", "Tailwind", "Framer Motion"],
       githubUrl: "https://github.com",
       liveUrl: "https://example.com"
-    }
+    } */
   ]
 };
 
 export const contactData = {
   title: "Get In Touch",
   subtitle: "Have a project in mind or just want to say hi? I'd love to hear from you.",
-  email: "hello@dilshajayasekara.com",
-  phone: "+94 77 123 4567",
-  location: "Colombo, Sri Lanka",
+  email: "dilshajayasekara2024@gmail.com",
+  phone: "+94 77 522 7202",
+  location: "Matara, Sri Lanka",
   socialLinks: [
     { name: "GitHub", url: "https://github.com", icon: "FaGithub" },
     { name: "LinkedIn", url: "https://linkedin.com", icon: "FaLinkedin" },
