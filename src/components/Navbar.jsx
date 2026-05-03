@@ -19,6 +19,7 @@ const Navbar = () => {
         <a href="#about" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">About</a>
         <a href="#skills" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Skills</a>
         <a href="#projects" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Projects</a>
+        <a href="#blog" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Blog</a>
         <a href="#contact" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Contact</a>
 
         {/* Theme Toggle Button */}

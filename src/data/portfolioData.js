@@ -134,3 +134,36 @@ export const footerData = {
     { name: "Projects", url: "#projects" },
   ]
 };
+
+export const blogData = {
+  title: "Blog",
+  articles: [
+    {
+      id: 1,
+      date: "2 hours ago",
+      readTime: "6 min read",
+      title: "How AI Is Changing Software Engineering in 2026 (And What Students Must Do)",
+      description: "An exploration of how Artificial Intelligence is reshaping the software development lifecycle, from automated code generation to intelligent debugging, and what current students should focus on to stay relevant.",
+      tags: ["AI", "Software Engineering", "Future Trends", "Education"],
+      link: "https://medium.com/@dilshajayasekara/how-ai-is-changing-software-engineering-in-2026-and-what-students-must-do-b49e42c703ab"
+    },
+    {
+      id: 2,
+      date: "Jun 23, 2025",
+      readTime: "2 min read",
+      title: "Building My First Simple OS in Assembly: Dill OS",
+      description: "Creating an operating system is one of the most exciting challenges for a systems programmer. As a passion project, I built a tiny but fully functional OS named Dill OS, written entirely in x86 assembly. It runs on real hardware (via BIOS) and can be tested using emulators like QEMU.",
+      tags: ["Assembly", "Operating System", "x86", "QEMU"],
+      link: "https://medium.com/@dilshajayasekara/%EF%B8%8F-building-my-first-simple-os-in-assembly-dill-os-c18d64d50505"
+    },
+    /*{
+      id: 3,
+      date: "May 27, 2025",
+      readTime: "3 min read",
+      title: "Understanding Software Licenses: A Guide for Software Engineering Students",
+      description: "A clear and concise guide to understanding different types of software licenses, including open-source and proprietary models, and how they impact software development and distribution.",
+      tags: ["Software Engineering", "Licensing", "Open Source", "Legal Basics"],
+      link: "#"
+    }*/
+  ]
+};
