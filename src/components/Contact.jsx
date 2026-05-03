@@ -24,27 +24,38 @@ const Contact = () => {
     setFormData(prev => ({ ...prev, [id]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Format the email body
-    const emailBody = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
-    const mailtoLink = `mailto:${contactData.email}?subject=${encodeURIComponent(formData.subject || 'Portfolio Contact')}&body=${encodeURIComponent(emailBody)}`;
-    
-    // Simulate a brief loading state for UX
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setShowSuccess(true);
-      // Open the user's default email client
-      window.location.href = mailtoLink;
-      
-      // Clear the form after a short delay
-      setTimeout(() => {
+    try {
+      const response = await fetch(`https://formsubmit.co/ajax/${contactData.email}`, {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message
+        })
+      });
+
+      if (response.ok) {
+        setShowSuccess(true);
         setFormData({ name: '', email: '', subject: '', message: '' });
-        setShowSuccess(false);
-      }, 3000);
-    }, 800);
+        setTimeout(() => setShowSuccess(false), 5000);
+      } else {
+        alert("Oops! Something went wrong while sending your message. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error sending email:", error);
+      alert("An error occurred while sending the message. Please check your connection.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -160,7 +171,7 @@ const Contact = () => {
                   className="absolute top-0 left-0 right-0 bg-green-500/10 border-b border-green-500/20 p-4 flex items-center justify-center gap-3 text-green-600 dark:text-green-400"
                 >
                   <FaCheckCircle size={20} />
-                  <span className="font-medium">Opening your email client...</span>
+                  <span className="font-medium">Message sent successfully!</span>
                 </motion.div>
               )}
             </AnimatePresence>

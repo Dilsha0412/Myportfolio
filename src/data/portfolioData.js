@@ -94,21 +94,21 @@ export const projectsData = {
       title: "Coffee Shop Website ",
       category: "Frontend",
       description: "A simple coffee shop website for browsing and purchasing coffee items with a modern and responsive interface.",
-      image: "https://images.unsplash.com/photo-1572584668474-361465c37c2d?q=80&w=2070&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=2071&auto=format&fit=crop",
       tech: ["HTML", "CSS", "JavaScript"],
       githubUrl: "https://github.com/Dilsha0412/Coffee--Shop.git",
       //liveUrl: "https://example.com"
     },
-   /* {
-      id: 4,
-      title: "Portfolio Template",
-      category: "Frontend",
-      description: "A highly customizable and responsive portfolio template for developers and designers.",
-      image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=2055&auto=format&fit=crop",
-      tech: ["React", "Tailwind", "Framer Motion"],
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com"
-    } */
+    /* {
+       id: 4,
+       title: "Portfolio Template",
+       category: "Frontend",
+       description: "A highly customizable and responsive portfolio template for developers and designers.",
+       image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=2055&auto=format&fit=crop",
+       tech: ["React", "Tailwind", "Framer Motion"],
+       githubUrl: "https://github.com",
+       liveUrl: "https://example.com"
+     } */
   ]
 };
 
