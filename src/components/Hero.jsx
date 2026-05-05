@@ -66,16 +66,17 @@ const Hero = () => {
           className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
         >
           <a
-            href={heroData.primaryCtaLink}
-            className="px-8 py-3.5 bg-[#3b82f6] text-white font-medium rounded-full transition-all duration-300 shadow-[0_0_20px_rgba(59,130,246,0.4)] hover:shadow-[0_0_30px_rgba(59,130,246,0.6)] hover:-translate-y-0.5"
-          >
-            {heroData.primaryCtaText}
-          </a>
-          <a
             href={heroData.secondaryCtaLink}
-            className="px-8 py-3.5 bg-white dark:bg-[#1e2336] text-gray-900 dark:text-white font-medium rounded-full transition-all duration-300 hover:bg-gray-50 dark:hover:bg-[#2a3044] border border-gray-300 dark:border-gray-800"
+            download="My_CV.pdf"
+            className="px-8 py-3.5 bg-transparent border border-gray-400 dark:border-gray-600 text-gray-900 dark:text-white font-medium rounded-full transition-all duration-300 hover:bg-gray-100 dark:hover:bg-white/5"
           >
             {heroData.secondaryCtaText}
+          </a>
+          <a
+            href={heroData.primaryCtaLink}
+            className="px-8 py-3.5 bg-[#0ea5e9] text-white font-medium rounded-full transition-all duration-300 shadow-[0_0_20px_rgba(14,165,233,0.4)] hover:shadow-[0_0_30px_rgba(14,165,233,0.6)] hover:-translate-y-0.5"
+          >
+            {heroData.primaryCtaText}
           </a>
         </motion.div>
 
