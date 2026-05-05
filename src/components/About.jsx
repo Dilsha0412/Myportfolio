@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { aboutData } from '../data/portfolioData';
-import profileImg from '../assets/profile.jpg';
+import profileImg from '../assets/gemisaver_Gemini_Generated_Image_7wb3oy7wb3oy7wb3 (1).png';
 
 const About = () => {
 
@@ -43,20 +43,13 @@ const About = () => {
               {/* Decorative back border */}
               <div className="absolute inset-0 border-2 border-blue-500 rounded-2xl transform -translate-x-4 -translate-y-4"></div>
               {/* Photo card */}
-              <div className="absolute inset-0 rounded-2xl overflow-hidden shadow-2xl z-10 border border-gray-200 dark:border-gray-700 transition-colors">
+              <div className="absolute inset-0 rounded-2xl overflow-hidden shadow-2xl z-10 border border-gray-200 dark:border-gray-700 transition-colors bg-[#0b1120]">
                 <img
                   src={profileImg}
                   alt="Dilsha Jayasekara"
                   className="w-full h-full object-cover"
                   style={{ objectPosition: 'center 30%' }}
                 />
-                {/* Dark mode tint overlay to blend the light photo background */}
-                <div className="absolute inset-0 bg-[#0b1120]/0 dark:bg-[#0b1120]/20 transition-colors pointer-events-none"></div>
-                {/* Gradient overlays to blend edges into the section background */}
-                <div className="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-t from-white dark:from-[#0b1120] to-transparent transition-colors pointer-events-none"></div>
-                <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-white/60 dark:from-[#0b1120]/70 to-transparent transition-colors pointer-events-none"></div>
-                <div className="absolute top-0 bottom-0 left-0 w-10 bg-gradient-to-r from-white/40 dark:from-[#0b1120]/50 to-transparent transition-colors pointer-events-none"></div>
-                <div className="absolute top-0 bottom-0 right-0 w-10 bg-gradient-to-l from-white/40 dark:from-[#0b1120]/50 to-transparent transition-colors pointer-events-none"></div>
               </div>
             </div>
           </motion.div>
