@@ -46,8 +46,10 @@ export const skillsData = {
       name: "Backend",
       skills: [
         { name: "Node.js", icon: "SiNodedotjs", color: "#68A063" },
+        { name: "Express.js", icon: "FaExpress", color: "#ffffff" },
+        { name: "TypeScript", icon: "SiTypescript", color: "#3178C6" },
+        { name: "JavaScript", icon: "SiJavascript", color: "#F7DF1E" },
         { name: "Python", icon: "SiPython", color: "#F7C948" },
-        { name: "Express", icon: "FaExpress", color: "#ffffff" },
         { name: "Java", icon: "FaJava", color: "#f89820" },
       ]
     },

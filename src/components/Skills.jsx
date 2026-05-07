@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiHtml5, SiCss, SiNodedotjs, SiPython, SiMongodb, SiMysql, SiGit, SiGithub, SiFigma } from 'react-icons/si';
+import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiHtml5, SiCss, SiNodedotjs, SiPython, SiMongodb, SiMysql, SiGit, SiGithub, SiFigma, SiJavascript } from 'react-icons/si';
 import { FaJava, FaServer } from 'react-icons/fa';
 import { VscVscode } from 'react-icons/vsc';
 
@@ -21,7 +21,9 @@ const skillCategories = [
     skills: [
       //{ name: 'Node.js', Icon: SiNodedotjs, color: '#68A063' },
       //{ name: 'Python', Icon: SiPython, color: '#F7C948' },
-      //{ name: 'Express', Icon: FaServer, color: '#cccccc' },
+      { name: 'TypeScript', Icon: SiTypescript, color: '#3178C6' },
+      { name: 'JavaScript', Icon: SiJavascript, color: '#F7DF1E' },
+      { name: 'Express.js', Icon: FaServer, color: '#cccccc' },
       { name: 'Java', Icon: FaJava, color: '#f89820' },
     ],
   },
