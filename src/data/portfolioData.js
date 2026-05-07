@@ -156,14 +156,14 @@ export const blogData = {
       tags: ["Assembly", "Operating System", "x86", "QEMU"],
       link: "https://medium.com/@dilshajayasekara/%EF%B8%8F-building-my-first-simple-os-in-assembly-dill-os-c18d64d50505"
     },
-    /*{
+    {
       id: 3,
-      date: "May 27, 2025",
-      readTime: "3 min read",
-      title: "Understanding Software Licenses: A Guide for Software Engineering Students",
-      description: "A clear and concise guide to understanding different types of software licenses, including open-source and proprietary models, and how they impact software development and distribution.",
-      tags: ["Software Engineering", "Licensing", "Open Source", "Legal Basics"],
-      link: "#"
-    }*/
+      date: "May 7, 2026",
+      readTime: "5 min read",
+      title: "JWT Authentication Done Right: The Ultimate Guide to Mistakes and Best Practices",
+      description: "A comprehensive guide on implementing JWT authentication correctly, highlighting common mistakes and outlining best practices for secure applications.",
+      tags: ["JWT", "Authentication", "Security", "Best Practices"],
+      link: "https://medium.com/@dilshajayasekara/jwt-authentication-done-right-the-ultimate-guide-to-mistakes-and-best-practices-9fd28dc713d7"
+    }
   ]
 };
