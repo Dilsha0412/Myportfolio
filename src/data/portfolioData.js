@@ -1,3 +1,5 @@
+import cvPdf from '../assets/Dilsha\'s CV.pdf.pdf';
+
 export const heroData = {
   greeting: "WELCOME TO MY PORTFOLIO",
   firstName: "Dilsha",
@@ -7,7 +9,7 @@ export const heroData = {
   primaryCtaText: "View My Work",
   primaryCtaLink: "#projects",
   secondaryCtaText: "Download CV",
-  secondaryCtaLink: "/CV.pdf",
+  secondaryCtaLink: cvPdf,
   socialLinks: [
     { name: "GitHub", url: "https://github.com", icon: "FaGithub" },
     { name: "LinkedIn", url: "https://linkedin.com", icon: "FaLinkedin" },
