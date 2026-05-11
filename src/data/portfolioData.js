@@ -1,4 +1,7 @@
 import cvPdf from '../assets/Dilsha\'s CV.pdf.pdf';
+import rabbitEcommerceImg from '../assets/rabbit-ecommerce.png';
+import coffeeShopImg from '../assets/coffee-shop.png';
+import sportItemsImg from '../assets/sport-items.png';
 
 export const heroData = {
   greeting: "WELCOME TO MY PORTFOLIO",
@@ -78,7 +81,7 @@ export const projectsData = {
       title: "Rabbit - Ecommerce Website with MERN",
       category: "Full Stack",
       description: "A modern e-commerce platform for browsing, managing, and purchasing products with a seamless user experience.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
+      image: rabbitEcommerceImg,
       tech: ["React", "Tailwind", "Express.js", "MongoDB"],
       githubUrl: "https://github.com/Dilsha0412/Rabbit-Ecommerce.git",
       //liveUrl: "https://example.com"
@@ -88,7 +91,7 @@ export const projectsData = {
       title: "Sport Item Website",
       category: "Frontend",
       description: "A simple e-commerce website for browsing and purchasing sports items with a modern and responsive interface.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop",
+      image: sportItemsImg,
       tech: ["HTML", "CSS", "JavaScript"],
       githubUrl: "https://github.com/Dilsha0412/Sport-Item-Website-Frontend.git",
       //liveUrl: "https://example.com"
@@ -98,7 +101,7 @@ export const projectsData = {
       title: "Coffee Shop Website ",
       category: "Frontend",
       description: "A simple coffee shop website for browsing and purchasing coffee items with a modern and responsive interface.",
-      image: "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=2071&auto=format&fit=crop",
+      image: coffeeShopImg,
       tech: ["HTML", "CSS", "JavaScript"],
       githubUrl: "https://github.com/Dilsha0412/Coffee--Shop.git",
       //liveUrl: "https://example.com"
