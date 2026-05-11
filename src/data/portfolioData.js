@@ -1,7 +1,7 @@
 import cvPdf from '../assets/Dilsha\'s CV.pdf.pdf';
 import rabbitEcommerceImg from '../assets/rabbit-ecommerce.png';
 import coffeeShopImg from '../assets/coffee-shop.png';
-import sportItemsImg from '../assets/sport-items.png';
+import sportivoImg from '../assets/sportivo.png';
 
 export const heroData = {
   greeting: "WELCOME TO MY PORTFOLIO",
@@ -88,12 +88,12 @@ export const projectsData = {
     },
     {
       id: 2,
-      title: "Sport Item Website",
+      title: "Sportivo Website",
       category: "Frontend",
-      description: "A simple e-commerce website for browsing and purchasing sports items with a modern and responsive interface.",
-      image: sportItemsImg,
+      description: "A modern sports website featuring an energetic UI and dynamic design, highlighting sports gear and athletic achievements.",
+      image: sportivoImg,
       tech: ["HTML", "CSS", "JavaScript"],
-      githubUrl: "https://github.com/Dilsha0412/Sport-Item-Website-Frontend.git",
+      githubUrl: "https://github.com/Dilsha0412/Sportivo-Website",
       //liveUrl: "https://example.com"
     },
     {
