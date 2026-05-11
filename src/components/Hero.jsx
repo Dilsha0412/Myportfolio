@@ -71,7 +71,7 @@ const Hero = () => {
           >
             <a
               href={heroData.secondaryCtaLink}
-              download="My_CV.pdf"
+              download="Dilsha_Jayasekara_CV.pdf"
               className="px-8 py-3.5 bg-transparent border border-[#3b82f6] text-gray-900 dark:text-white hover:bg-[#3b82f6] hover:border-[#3b82f6] hover:text-white font-medium rounded-sm transition-all duration-300 uppercase tracking-wider text-sm"
             >
               {heroData.secondaryCtaText}
