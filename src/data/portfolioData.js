@@ -16,7 +16,7 @@ export const heroData = {
   socialLinks: [
     { name: "GitHub", url: "https://github.com", icon: "FaGithub" },
     { name: "LinkedIn", url: "https://linkedin.com", icon: "FaLinkedin" },
-    { name: "Twitter", url: "https://twitter.com", icon: "FaTwitter" },
+    { name: "Twitter", url: "https://x.com/dilsha0412", icon: "FaTwitter" },
   ]
 };
 
@@ -128,7 +128,7 @@ export const contactData = {
   socialLinks: [
     { name: "GitHub", url: "https://github.com", icon: "FaGithub" },
     { name: "LinkedIn", url: "https://linkedin.com", icon: "FaLinkedin" },
-    { name: "Twitter", url: "https://twitter.com", icon: "FaTwitter" },
+    { name: "Twitter", url: "https://x.com/dilsha0412", icon: "FaTwitter" },
   ]
 };
 

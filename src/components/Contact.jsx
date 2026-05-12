@@ -116,7 +116,7 @@ const Contact = () => {
               </div>
               
               <div className="flex items-start gap-4">
-                <div className="p-4 bg-purple-500/10 rounded-xl text-purple-500">
+                <div className="p-4 bg-blue-500/10 rounded-xl text-blue-500">
                   <FaPhoneAlt size={24} />
                 </div>
                 <div>
