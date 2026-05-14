@@ -15,7 +15,7 @@ const Blog = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 transition-colors"
+            className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 transition-colors uppercase"
           >
             {blogData.title}
           </motion.h2>

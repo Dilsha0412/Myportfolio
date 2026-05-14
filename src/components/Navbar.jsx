@@ -1,9 +1,6 @@
 import React from 'react';
-import { FiSun, FiMoon } from 'react-icons/fi';
-import { useTheme } from '../context/ThemeContext';
 
 const Navbar = () => {
-  const { theme, toggleTheme } = useTheme();
 
   return (
     <nav className="w-full fixed top-0 z-50 px-8 py-6 flex items-center justify-between bg-white/80 dark:bg-[#0b1120]/80 backdrop-blur-md transition-colors border-b border-gray-200 dark:border-transparent">
@@ -21,14 +18,6 @@ const Navbar = () => {
         <a href="#projects" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Projects</a>
         <a href="#blog" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Blog</a>
         <a href="#contact" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Contact</a>
-
-        {/* Theme Toggle Button */}
-        <button 
-          onClick={toggleTheme}
-          className="ml-4 p-2 rounded-full bg-gray-100 dark:bg-[#1e2336] text-gray-600 dark:text-yellow-500 hover:bg-gray-200 dark:hover:bg-[#2a3044] transition-colors border border-gray-300 dark:border-gray-700"
-        >
-          {theme === 'dark' ? <FiSun size={18} /> : <FiMoon size={18} />}
-        </button>
       </div>
     </nav>
   );
