@@ -15,17 +15,10 @@ const Blog = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 transition-colors uppercase"
+            className="text-5xl md:text-7xl font-normal text-gray-900 dark:text-white mb-4 transition-colors uppercase tracking-tight"
           >
             {blogData.title}
           </motion.h2>
-          <motion.div 
-            initial={{ opacity: 0, scaleX: 0 }}
-            whileInView={{ opacity: 1, scaleX: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="h-[1px] w-full bg-gray-200 dark:bg-gray-800"
-          ></motion.div>
         </div>
 
         {/* Blog Grid */}
@@ -40,7 +33,7 @@ const Blog = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white dark:bg-[#0b101e] rounded-xl border border-gray-200 dark:border-gray-800/60 p-6 flex flex-col group hover:border-blue-500/30 dark:hover:border-blue-500/30 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-500/10 dark:hover:shadow-blue-900/20 cursor-pointer block"
+              className="bg-white dark:bg-[#050505] rounded-none border border-gray-200 dark:border-white/10 p-6 flex flex-col group hover:border-white/30 dark:hover:border-white/30 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-white/5 dark:hover:shadow-white/5 cursor-pointer block"
             >
               {/* Date and Read Time */}
               <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-4 font-mono">
@@ -52,7 +45,7 @@ const Blog = () => {
               </div>
 
               {/* Title */}
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 leading-snug group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors">
+              <h3 className="text-xl font-normal text-gray-900 dark:text-white mb-3 leading-snug group-hover:text-gray-900 dark:group-hover:text-white transition-colors">
                 {article.title}
               </h3>
 
@@ -66,7 +59,7 @@ const Blog = () => {
                 {article.tags.map((tag, i) => (
                   <span 
                     key={i}
-                    className="px-3 py-1 text-xs font-medium bg-purple-50/50 dark:bg-transparent text-purple-600 dark:text-[#9e82ff] border border-purple-200 dark:border-[#382a5c] rounded-full"
+                    className="px-3 py-1 text-xs font-medium bg-gray-100 dark:bg-transparent text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-white/20 rounded-none"
                   >
                     {tag}
                   </span>

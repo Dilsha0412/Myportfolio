@@ -11,14 +11,20 @@ import './App.css';
 
 function App() {
   return (
-    <div className="antialiased bg-gray-50 dark:bg-[#0b1120] transition-colors min-h-screen text-gray-900 dark:text-gray-200">
+    <div className="antialiased bg-gray-50 dark:bg-black transition-colors min-h-screen text-gray-900 dark:text-white">
       <Navbar />
       <Hero />
+      <hr className="border-t border-white/20 mx-auto max-w-6xl" />
       <About />
+      <hr className="border-t border-white/20 mx-auto max-w-6xl" />
       <Skills />
+      <hr className="border-t border-white/20 mx-auto max-w-6xl" />
       <Projects />
+      <hr className="border-t border-white/20 mx-auto max-w-6xl" />
       <Blog />
+      <hr className="border-t border-white/20 mx-auto max-w-6xl" />
       <Contact />
+      <hr className="border-t border-white/20 mx-auto max-w-6xl" />
       <Footer />
     </div>
   );

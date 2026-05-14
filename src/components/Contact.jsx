@@ -69,17 +69,10 @@ const Contact = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 transition-colors uppercase"
+            className="text-5xl md:text-7xl font-normal text-gray-900 dark:text-white mb-4 transition-colors uppercase tracking-tight"
           >
             {contactData.title}
           </motion.h2>
-          <motion.div 
-            initial={{ opacity: 0, scaleX: 0 }}
-            whileInView={{ opacity: 1, scaleX: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="h-1 w-24 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full mb-6"
-          ></motion.div>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -100,13 +93,13 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="bg-gray-50 dark:bg-[#0f172a] rounded-2xl p-8 border border-gray-200 dark:border-gray-800/50 lg:col-span-1 transition-colors"
+            className="bg-gray-50 dark:bg-[#050505] rounded-none p-8 border border-gray-200 dark:border-white/10 lg:col-span-1 transition-colors"
           >
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 transition-colors">Contact Information</h3>
+            <h3 className="text-2xl font-normal text-gray-900 dark:text-white mb-8 transition-colors">Contact Information</h3>
             
             <div className="space-y-6 mb-12">
-              <div className="flex items-start gap-4">
-                <div className="p-4 bg-blue-500/10 rounded-xl text-blue-500">
+              <div className="flex items-start gap-4 group/item cursor-default">
+                <div className="p-4 dark:bg-white/10 bg-gray-900/10 rounded-none dark:text-white text-gray-900 group-hover/item:scale-110 group-hover/item:shadow-[0_0_15px_rgba(255,255,255,0.1)] transition-all duration-300">
                   <FaEnvelope size={24} />
                 </div>
                 <div>
@@ -115,8 +108,8 @@ const Contact = () => {
                 </div>
               </div>
               
-              <div className="flex items-start gap-4">
-                <div className="p-4 bg-blue-500/10 rounded-xl text-blue-500">
+              <div className="flex items-start gap-4 group/item cursor-default">
+                <div className="p-4 dark:bg-white/10 bg-gray-900/10 rounded-none dark:text-white text-gray-900 group-hover/item:scale-110 group-hover/item:shadow-[0_0_15px_rgba(255,255,255,0.1)] transition-all duration-300">
                   <FaPhoneAlt size={24} />
                 </div>
                 <div>
@@ -125,8 +118,8 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="p-4 bg-blue-500/10 rounded-xl text-blue-500">
+              <div className="flex items-start gap-4 group/item cursor-default">
+                <div className="p-4 dark:bg-white/10 bg-gray-900/10 rounded-none dark:text-white text-gray-900 group-hover/item:scale-110 group-hover/item:shadow-[0_0_15px_rgba(255,255,255,0.1)] transition-all duration-300">
                   <FaMapMarkerAlt size={24} />
                 </div>
                 <div>
@@ -145,7 +138,7 @@ const Contact = () => {
                     href={social.url} 
                     target="_blank" 
                     rel="noreferrer"
-                    className="p-3 bg-gray-200 dark:bg-slate-800 rounded-xl text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-300 dark:hover:bg-slate-700 transition-colors"
+                    className="p-3 bg-gray-200 dark:bg-[#111] rounded-none text-gray-600 dark:text-gray-400 hover:text-white hover:bg-gray-300 dark:hover:bg-white/10 hover:scale-110 hover:shadow-[0_0_12px_rgba(255,255,255,0.1)] transition-all duration-300"
                   >
                     {iconMap[social.icon]}
                   </a>
@@ -160,7 +153,7 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="bg-gray-50 dark:bg-[#0f172a] rounded-2xl p-8 border border-gray-200 dark:border-gray-800/50 lg:col-span-2 transition-colors relative overflow-hidden"
+            className="bg-gray-50 dark:bg-[#050505] rounded-none p-8 border border-gray-200 dark:border-white/10 lg:col-span-2 transition-colors relative overflow-hidden"
           >
             <AnimatePresence>
               {showSuccess && (
@@ -187,7 +180,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     placeholder="John Doe"
-                    className="w-full bg-white dark:bg-slate-800/50 border border-gray-300 dark:border-gray-700 rounded-xl px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                    className="w-full bg-white dark:bg-[#111]/50 border border-gray-300 dark:border-white/10 rounded-none px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition-all"
                   />
                 </div>
                 <div>
@@ -199,7 +192,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     placeholder="john@example.com"
-                    className="w-full bg-white dark:bg-slate-800/50 border border-gray-300 dark:border-gray-700 rounded-xl px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                    className="w-full bg-white dark:bg-[#111]/50 border border-gray-300 dark:border-white/10 rounded-none px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition-all"
                   />
                 </div>
               </div>
@@ -213,7 +206,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   placeholder="How can I help you?"
-                  className="w-full bg-white dark:bg-slate-800/50 border border-gray-300 dark:border-gray-700 rounded-xl px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                  className="w-full bg-white dark:bg-[#111]/50 border border-gray-300 dark:border-white/10 rounded-none px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition-all"
                 />
               </div>
 
@@ -226,25 +219,31 @@ const Contact = () => {
                   required
                   rows="5"
                   placeholder="Write your message here..."
-                  className="w-full bg-white dark:bg-slate-800/50 border border-gray-300 dark:border-gray-700 rounded-xl px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
+                  className="w-full bg-white dark:bg-[#111]/50 border border-gray-300 dark:border-white/10 rounded-none px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition-all resize-none"
                 ></textarea>
               </div>
 
               <button 
                 type="submit"
                 disabled={isSubmitting}
-                className="bg-blue-500 text-white font-medium px-8 py-3 rounded-xl hover:bg-blue-600 transition-colors shadow-[0_0_15px_rgba(59,130,246,0.3)] hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] disabled:opacity-70 disabled:cursor-not-allowed flex items-center gap-2"
+                className="w-full bg-transparent border border-white/30 text-white font-medium py-4 rounded-none hover:bg-white/5 hover:border-white/60 hover:shadow-[0_0_20px_rgba(255,255,255,0.08)] transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-3 uppercase tracking-widest text-sm"
               >
                 {isSubmitting ? (
                   <>
-                    <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <svg className="animate-spin h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                       <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                       <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                     </svg>
                     Processing...
                   </>
                 ) : (
-                  'Send Message'
+                  <>
+                    Send Message
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <line x1="22" y1="2" x2="11" y2="13"></line>
+                      <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                  </>
                 )}
               </button>
             </form>

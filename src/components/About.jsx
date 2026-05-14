@@ -6,7 +6,7 @@ import profileImg from '../assets/gemisaver_Gemini_Generated_Image_7wb3oy7wb3oy7
 const About = () => {
 
   return (
-    <section id="about" className="py-24 bg-white dark:bg-[#0b1120] text-gray-600 dark:text-gray-300 relative font-sans transition-colors">
+    <section id="about" className="py-24 bg-white dark:bg-black text-gray-600 dark:text-gray-300 relative font-sans transition-colors">
       <div className="max-w-6xl mx-auto px-6">
 
         {/* Section Heading */}
@@ -16,17 +16,10 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 transition-colors uppercase"
+            className="text-5xl md:text-7xl font-normal text-gray-900 dark:text-white mb-4 transition-colors uppercase tracking-tight"
           >
             {aboutData.title}
           </motion.h2>
-          <motion.div
-            initial={{ opacity: 0, scaleX: 0 }}
-            whileInView={{ opacity: 1, scaleX: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="h-1 w-24 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"
-          ></motion.div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
@@ -41,9 +34,9 @@ const About = () => {
           >
             <div className="relative w-64 md:w-72" style={{ height: '420px' }}>
               {/* Decorative back border */}
-              <div className="absolute inset-0 border-2 border-blue-500 rounded-2xl transform -translate-x-4 -translate-y-4"></div>
+              <div className="absolute inset-0 border-2 border-white/30 rounded-none transform -translate-x-4 -translate-y-4"></div>
               {/* Photo card */}
-              <div className="absolute inset-0 rounded-2xl overflow-hidden shadow-2xl z-10 border border-gray-200 dark:border-gray-700 transition-colors bg-[#0b1120]">
+              <div className="absolute inset-0 rounded-none overflow-hidden shadow-2xl z-10 border border-gray-200 dark:border-white/10 transition-colors bg-black">
                 <img
                   src={profileImg}
                   alt="Dilsha Jayasekara"
@@ -61,7 +54,7 @@ const About = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 transition-colors">
+            <h3 className="text-3xl font-normal text-gray-900 dark:text-white mb-6 transition-colors">
               {aboutData.subtitle}
             </h3>
 
@@ -80,9 +73,9 @@ const About = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.3 + (index * 0.1) }}
-                  className="bg-gray-50 dark:bg-[#161d2d] border border-gray-200 dark:border-gray-800 rounded-xl p-6 text-center shadow-lg hover:-translate-y-1 transition-transform duration-300"
+                  className="bg-gray-50 dark:bg-[#111] border border-gray-200 dark:border-white/10 rounded-none p-6 text-center shadow-lg hover:-translate-y-1 transition-transform duration-300"
                 >
-                  <div className="text-3xl md:text-4xl font-bold text-blue-500 mb-2">
+                  <div className="text-3xl md:text-4xl font-normal dark:text-white text-gray-900 mb-2">
                     {stat.value}
                   </div>
                   <div className="text-xs md:text-sm text-gray-500 uppercase tracking-wider">

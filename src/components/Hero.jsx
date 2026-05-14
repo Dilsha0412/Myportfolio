@@ -8,40 +8,29 @@ import heroImage from '../assets/Untitled.png';
 const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-transparent relative font-sans transition-colors overflow-hidden">
-      {/* Subtle background glow effect */}
-      <div className="absolute top-[20%] left-[-10%] w-[500px] h-[500px] bg-blue-900/20 rounded-full blur-[120px] pointer-events-none"></div>
-      <div className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-purple-900/10 rounded-full blur-[150px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10 pt-20 flex flex-col md:flex-row items-center justify-between w-full">
         {/* Left Text Content */}
-        <div className="w-full md:w-1/2 text-left pr-0 md:pr-10 z-10">
-          <motion.p
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="text-[#3b82f6] font-bold tracking-[0.2em] text-xs md:text-sm mb-6 uppercase"
-          >
-            {heroData.greeting}
-          </motion.p>
+        <div className="w-full md:w-1/2 text-left pr-0 md:pr-10 z-10 -mt-8 md:-mt-16">
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-4 tracking-tight transition-colors"
+            className="text-5xl md:text-6xl lg:text-[5rem] font-normal text-gray-900 dark:text-white mb-6 tracking-tight transition-colors uppercase leading-tight"
           >
-            Hi, I'm <span className="text-[#60a5fa]">{heroData.firstName}</span> <br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#818cf8] to-[#c084fc]">{heroData.lastName}</span>
+            Hi, I'm <span className="text-gray-900 dark:text-white">{heroData.firstName}</span> <br/>
+            <span className="text-gray-900 dark:text-white">{heroData.lastName}</span>
           </motion.h1>
 
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-2xl md:text-3xl font-semibold text-gray-800 dark:text-white mb-6 transition-colors"
+            className="text-2xl md:text-3xl lg:text-4xl font-normal text-gray-800 dark:text-white mb-8 transition-colors uppercase"
           >
             I am {' '}
-            <span className="text-[#3b82f6] bg-gray-100 dark:bg-white/10 px-2 py-1 rounded-md">
+            <span className="text-gray-900 dark:text-white bg-gray-100 dark:bg-white/10 px-2 py-1 rounded-none">
               <Typewriter
                 words={heroData.roles}
                 loop={0}
@@ -72,13 +61,13 @@ const Hero = () => {
             <a
               href={heroData.secondaryCtaLink}
               download="Dilsha_Jayasekara_CV.pdf"
-              className="px-8 py-3.5 bg-transparent border border-[#3b82f6] text-gray-900 dark:text-white hover:bg-[#3b82f6] hover:border-[#3b82f6] hover:text-white font-medium rounded-sm transition-all duration-300 uppercase tracking-wider text-sm"
+              className="px-8 py-3.5 bg-transparent border border-white text-white hover:bg-white hover:text-black font-medium rounded-none transition-all duration-300 uppercase tracking-wider text-sm hover:shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:scale-105"
             >
               {heroData.secondaryCtaText}
             </a>
             <a
               href={heroData.primaryCtaLink}
-              className="px-8 py-3.5 bg-[#3b82f6] hover:bg-[#2563eb] text-white font-medium rounded-sm transition-all duration-300 uppercase tracking-wider text-sm shadow-[0_0_15px_rgba(59,130,246,0.4)] hover:shadow-[0_0_25px_rgba(59,130,246,0.6)]"
+              className="px-8 py-3.5 bg-transparent border border-white text-white hover:bg-white hover:text-black font-medium rounded-none transition-all duration-300 uppercase tracking-wider text-sm hover:shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:scale-105"
             >
               {heroData.primaryCtaText}
             </a>
@@ -90,13 +79,13 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.8 }}
             className="flex items-center justify-start gap-6"
           >
-            <a href={heroData.socialLinks[0].url} target="_blank" rel="noreferrer" className="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-white transition-colors">
+            <a href={heroData.socialLinks[0].url} target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white hover:scale-125 hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.4)] transition-all duration-300">
               <FaGithub size={24} />
             </a>
-            <a href={heroData.socialLinks[1].url} target="_blank" rel="noreferrer" className="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-white transition-colors">
+            <a href={heroData.socialLinks[1].url} target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white hover:scale-125 hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.4)] transition-all duration-300">
               <FaLinkedin size={24} />
             </a>
-            <a href={heroData.socialLinks[2].url} target="_blank" rel="noreferrer" className="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-white transition-colors">
+            <a href={heroData.socialLinks[2].url} target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white hover:scale-125 hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.4)] transition-all duration-300">
               <FaTwitter size={24} />
             </a>
           </motion.div>

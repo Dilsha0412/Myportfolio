@@ -8,34 +8,34 @@ const skillCategories = [
   {
     name: 'Frontend',
     skills: [
-      { name: 'React', Icon: SiReact, color: '#61DAFB' },
+      { name: 'React', Icon: SiReact, color: '#ffffff' },
       // { name: 'Next.js', Icon: SiNextdotjs, color: '#ffffff' },
-      // { name: 'TypeScript', Icon: SiTypescript, color: '#3178C6' },
-      { name: 'Tailwind CSS', Icon: SiTailwindcss, color: '#38BDF8' },
-      { name: 'HTML5', Icon: SiHtml5, color: '#E34F26' },
-      //{ name: 'CSS3', Icon: SiCss, color: '#1572B6' },
+      // { name: 'TypeScript', Icon: SiTypescript, color: '#ffffff' },
+      { name: 'Tailwind CSS', Icon: SiTailwindcss, color: '#ffffff' },
+      { name: 'HTML5', Icon: SiHtml5, color: '#ffffff' },
+      //{ name: 'CSS3', Icon: SiCss, color: '#ffffff' },
     ],
   },
   {
     name: 'Backend',
     skills: [
-      //{ name: 'Node.js', Icon: SiNodedotjs, color: '#68A063' },
-      //{ name: 'Python', Icon: SiPython, color: '#F7C948' },
-      { name: 'TypeScript', Icon: SiTypescript, color: '#3178C6' },
-      { name: 'JavaScript', Icon: SiJavascript, color: '#F7DF1E' },
-      { name: 'Express.js', Icon: FaServer, color: '#cccccc' },
-      { name: 'Java', Icon: FaJava, color: '#f89820' },
+      //{ name: 'Node.js', Icon: SiNodedotjs, color: '#ffffff' },
+      //{ name: 'Python', Icon: SiPython, color: '#ffffff' },
+      { name: 'TypeScript', Icon: SiTypescript, color: '#ffffff' },
+      { name: 'JavaScript', Icon: SiJavascript, color: '#ffffff' },
+      { name: 'Express.js', Icon: FaServer, color: '#ffffff' },
+      { name: 'Java', Icon: FaJava, color: '#ffffff' },
     ],
   },
   {
     name: 'Database & Tools',
     skills: [
-      { name: 'MongoDB', Icon: SiMongodb, color: '#47A248' },
-      { name: 'MySQL', Icon: SiMysql, color: '#4479A1' },
-      { name: 'Git', Icon: SiGit, color: '#F05032' },
+      { name: 'MongoDB', Icon: SiMongodb, color: '#ffffff' },
+      { name: 'MySQL', Icon: SiMysql, color: '#ffffff' },
+      { name: 'Git', Icon: SiGit, color: '#ffffff' },
       { name: 'GitHub', Icon: SiGithub, color: '#ffffff' },
-      //{ name: 'Figma', Icon: SiFigma, color: '#F24E1E' },
-      { name: 'VS Code', Icon: VscVscode, color: '#007ACC' },
+      //{ name: 'Figma', Icon: SiFigma, color: '#ffffff' },
+      { name: 'VS Code', Icon: VscVscode, color: '#ffffff' },
     ],
   },
 ];
@@ -55,7 +55,7 @@ const SkillCard = ({ name, Icon, color }) => (
     variants={cardVariants}
     whileHover={{ y: -6, scale: 1.06 }}
     transition={{ type: 'spring', stiffness: 280, damping: 20 }}
-    className="group flex flex-col items-center justify-center gap-3 bg-white dark:bg-[#111827] border border-gray-200 dark:border-gray-800 rounded-2xl p-5 cursor-default hover:border-blue-500/50 hover:bg-gray-50 dark:hover:bg-[#161d2d] hover:shadow-[0_0_24px_rgba(59,130,246,0.15)] transition-all duration-300"
+    className="group flex flex-col items-center justify-center gap-3 bg-white dark:bg-[#050505] border border-gray-200 dark:border-white/10 rounded-none p-5 cursor-default hover:border-white/40 hover:bg-gray-50 dark:hover:bg-[#111] hover:shadow-[0_0_24px_rgba(255,255,255,0.08)] transition-all duration-300"
   >
     <Icon size={40} style={{ color }} className="transition-transform duration-300 group-hover:scale-110 drop-shadow-sm" />
     <span className="text-sm font-medium text-gray-600 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors duration-200 text-center leading-tight">
@@ -67,9 +67,6 @@ const SkillCard = ({ name, Icon, color }) => (
 const Skills = () => {
   return (
     <section id="skills" className="py-24 bg-transparent text-gray-600 dark:text-gray-300 relative font-sans transition-colors">
-      {/* Background glow orbs */}
-      <div className="absolute top-1/3 right-[-5%] w-[400px] h-[400px] bg-blue-900/10 rounded-full blur-[130px] pointer-events-none" />
-      <div className="absolute bottom-0 left-[-5%] w-[350px] h-[350px] bg-purple-900/10 rounded-full blur-[130px] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         {/* Heading */}
@@ -79,17 +76,10 @@ const Skills = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 transition-colors uppercase"
+            className="text-5xl md:text-7xl font-normal text-gray-900 dark:text-white mb-4 transition-colors uppercase tracking-tight"
           >
             My Skills
           </motion.h2>
-          <motion.div
-            initial={{ opacity: 0, scaleX: 0 }}
-            whileInView={{ opacity: 1, scaleX: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="h-1 w-24 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-6"
-          />
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -113,10 +103,9 @@ const Skills = () => {
                 transition={{ duration: 0.4 }}
                 className="flex items-center gap-4 mb-8"
               >
-                <span className="text-sm font-semibold text-blue-400 uppercase tracking-widest whitespace-nowrap">
+                <span className="text-sm font-normal dark:text-white text-gray-900 uppercase tracking-widest whitespace-nowrap">
                   {category.name}
                 </span>
-                <div className="flex-1 h-px bg-gradient-to-r from-blue-500/40 to-transparent" />
               </motion.div>
 
               {/* Cards grid */}

@@ -22,17 +22,10 @@ const Projects = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 transition-colors uppercase"
+            className="text-5xl md:text-7xl font-normal text-gray-900 dark:text-white mb-8 transition-colors uppercase tracking-tight"
           >
             {projectsData.title}
           </motion.h2>
-          <motion.div 
-            initial={{ opacity: 0, scaleX: 0 }}
-            whileInView={{ opacity: 1, scaleX: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="h-1 w-24 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"
-          ></motion.div>
         </div>
 
         {/* Filters */}
@@ -41,10 +34,10 @@ const Projects = () => {
             <button
               key={index}
               onClick={() => setFilter(cat)}
-              className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+              className={`px-8 py-2.5 rounded-none text-sm font-medium transition-all duration-300 border ${
                 filter === cat 
-                  ? 'bg-blue-500 text-white shadow-[0_0_15px_rgba(59,130,246,0.5)]' 
-                  : 'bg-gray-200 dark:bg-slate-800 text-gray-600 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-slate-700'
+                  ? 'border-white text-white bg-white/10 shadow-[0_0_15px_rgba(255,255,255,0.1)]' 
+                  : 'border-white/10 bg-transparent text-gray-500 hover:text-white hover:border-white/40'
               }`}
             >
               {cat}
@@ -66,17 +59,17 @@ const Projects = () => {
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3 }}
                 key={project.id}
-                className="bg-white dark:bg-[#0f172a] rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800/50 hover:border-blue-500/30 group transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/10 flex flex-col"
+                className="bg-white dark:bg-[#050505] rounded-none overflow-hidden border border-gray-200 dark:border-white/10 hover:border-white/30 group transition-all duration-500 hover:shadow-[0_8px_30px_rgba(255,255,255,0.06)] hover:-translate-y-2 flex flex-col"
               >
                 {/* Image Container */}
-                <div className="relative aspect-video overflow-hidden bg-gray-100 dark:bg-slate-800 transition-colors">
+                <div className="relative aspect-video overflow-hidden bg-gray-100 dark:bg-[#111] transition-colors">
                   <img 
                     src={project.image} 
                     alt={project.title} 
                     className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   />
                   {/* Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-transparent to-transparent opacity-80 pointer-events-none"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80 pointer-events-none"></div>
                   
                   {/* Links (Hover) */}
                   <div className="absolute bottom-4 left-4 flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
@@ -85,7 +78,7 @@ const Projects = () => {
                         href={project.githubUrl} 
                         target="_blank" 
                         rel="noreferrer"
-                        className="p-3 bg-white/10 backdrop-blur-md rounded-full text-white hover:bg-white/20 transition-colors"
+                        className="p-3 bg-white/10 backdrop-blur-md rounded-none text-white hover:bg-white/20 transition-colors"
                       >
                         <FaGithub size={20} />
                       </a>
@@ -95,7 +88,7 @@ const Projects = () => {
                         href={project.liveUrl} 
                         target="_blank" 
                         rel="noreferrer"
-                        className="p-3 bg-white/10 backdrop-blur-md rounded-full text-white hover:bg-white/20 transition-colors"
+                        className="p-3 bg-white/10 backdrop-blur-md rounded-none text-white hover:bg-white/20 transition-colors"
                       >
                         <FaExternalLinkAlt size={20} />
                       </a>
@@ -105,10 +98,10 @@ const Projects = () => {
 
                 {/* Content Container */}
                 <div className="p-8 flex-1 flex flex-col">
-                  <div className="text-blue-500 text-sm font-bold tracking-wider mb-2 uppercase">
+                  <div className="dark:text-white text-gray-900 text-sm font-normal tracking-wider mb-2 uppercase">
                     {project.category}
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 transition-colors">
+                  <h3 className="text-2xl font-normal text-gray-900 dark:text-white mb-4 transition-colors">
                     {project.title}
                   </h3>
                   <p className="text-gray-600 dark:text-gray-400 mb-6 line-clamp-3 flex-1 transition-colors">
@@ -120,7 +113,7 @@ const Projects = () => {
                     {project.tech.map((tech, i) => (
                       <span 
                         key={i}
-                        className="px-3 py-1 text-sm bg-gray-100 dark:bg-slate-800/50 text-gray-600 dark:text-gray-300 rounded-full transition-colors"
+                        className="px-3 py-1 text-sm bg-gray-100 dark:bg-[#111]/50 text-gray-600 dark:text-gray-300 rounded-none transition-colors"
                       >
                         {tech}
                       </span>
