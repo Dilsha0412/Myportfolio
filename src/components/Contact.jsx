@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaGithub, FaLinkedin, FaTwitter, FaCheckCircle } from 'react-icons/fa';
+import emailjs from '@emailjs/browser';
 import { contactData } from '../data/portfolioData';
+
+const EMAILJS_SERVICE_ID  = 'service_b2nngmh';
+const EMAILJS_TEMPLATE_ID = 'template_swru8yl';
+const EMAILJS_PUBLIC_KEY  = 'xJWKsokX8ULcjj9HH';
 
 const iconMap = {
   FaGithub: <FaGithub size={20} />,
@@ -27,32 +32,29 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    try {
-      const response = await fetch(`https://formsubmit.co/ajax/${contactData.email}`, {
-        method: "POST",
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          subject: formData.subject,
-          message: formData.message
-        })
-      });
 
-      if (response.ok) {
-        setShowSuccess(true);
-        setFormData({ name: '', email: '', subject: '', message: '' });
-        setTimeout(() => setShowSuccess(false), 5000);
-      } else {
-        alert("Oops! Something went wrong while sending your message. Please try again.");
-      }
+    const templateParams = {
+      from_name:  formData.name,
+      from_email: formData.email,
+      email:      formData.email,
+      name:       formData.name,
+      subject:    formData.subject,
+      message:    formData.message,
+    };
+
+    try {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_PUBLIC_KEY
+      );
+      setShowSuccess(true);
+      setFormData({ name: '', email: '', subject: '', message: '' });
+      setTimeout(() => setShowSuccess(false), 5000);
     } catch (error) {
-      console.error("Error sending email:", error);
-      alert("An error occurred while sending the message. Please check your connection.");
+      console.error('EmailJS error:', error);
+      alert('Oops! Something went wrong while sending your message. Please try again.');
     } finally {
       setIsSubmitting(false);
     }
