@@ -1,4 +1,6 @@
 import React from 'react';
+import { FiDownload } from 'react-icons/fi';
+import { heroData } from '../data/portfolioData';
 
 const Navbar = () => {
 
@@ -15,9 +17,16 @@ const Navbar = () => {
         <a href="#contact" className="relative hover:text-white transition-all duration-300 after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">Contact</a>
       </div>
 
-      {/* Logo */}
-      <div className="absolute right-8 text-lg md:text-xl font-normal tracking-wide text-white">
-        Dilsha Jayasekara
+      {/* CV Download Button */}
+      <div className="absolute right-8">
+        <a
+          href={heroData.secondaryCtaLink}
+          download="Dilsha_Jayasekara_CV.pdf"
+          className="flex items-center gap-1.5 px-4 py-1.5 bg-transparent border border-white/30 hover:border-white text-white hover:bg-white hover:text-black font-normal rounded-none transition-all duration-300 tracking-wider text-xs hover:shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:scale-105 cursor-pointer"
+        >
+          <FiDownload className="text-base" />
+          <span>CV</span>
+        </a>
       </div>
       
     </nav>
