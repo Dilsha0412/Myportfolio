@@ -58,14 +58,14 @@ const About = () => {
               {aboutData.subtitle}
             </h3>
 
-            <div className="space-y-6 text-gray-600 dark:text-gray-400 leading-relaxed font-light mb-10 transition-colors">
+            <div className="space-y-6 text-lg text-gray-600 dark:text-gray-400 leading-relaxed font-light mb-10 transition-colors">
               {aboutData.paragraphs.map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>
               ))}
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 gap-6">
+            <div className="flex gap-6">
               {aboutData.stats.map((stat, index) => (
                 <motion.div
                   key={index}
@@ -73,12 +73,12 @@ const About = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.3 + (index * 0.1) }}
-                  className="bg-gray-50 dark:bg-[#111] border border-gray-200 dark:border-white/10 rounded-none p-6 text-center shadow-lg hover:-translate-y-1 transition-transform duration-300"
+                  className="bg-gray-50 dark:bg-[#111] border border-gray-200 dark:border-white/10 rounded-none px-6 py-4 md:px-8 md:py-5 min-w-[180px] text-center shadow-lg hover:-translate-y-1 transition-transform duration-300"
                 >
                   <div className="text-3xl md:text-4xl font-normal dark:text-white text-gray-900 mb-2">
                     {stat.value}
                   </div>
-                  <div className="text-xs md:text-sm text-gray-500 uppercase tracking-wider">
+                  <div className="text-xs text-gray-500 uppercase tracking-wider">
                     {stat.label}
                   </div>
                 </motion.div>

@@ -29,7 +29,7 @@ export const aboutData = {
     "My goal is to create impactful digital solutions that solve real-world problems while delivering great user experiences."
   ],
   stats: [
-    { value: "4+", label: "Projects Completed" }
+    { value: "3+", label: "Projects Completed" }
   ]
 };
 
