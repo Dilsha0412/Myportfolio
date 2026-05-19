@@ -182,7 +182,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     placeholder="John Doe"
-                    className="w-full bg-white dark:bg-[#111]/50 border border-gray-300 dark:border-white/10 rounded-none px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition-all"
+                    className="w-full bg-white dark:bg-[#111]/50 border border-gray-300 dark:border-white/10 rounded-none px-4 py-3 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition-all"
                   />
                 </div>
                 <div>
@@ -194,7 +194,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     placeholder="john@example.com"
-                    className="w-full bg-white dark:bg-[#111]/50 border border-gray-300 dark:border-white/10 rounded-none px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition-all"
+                    className="w-full bg-white dark:bg-[#111]/50 border border-gray-300 dark:border-white/10 rounded-none px-4 py-3 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition-all"
                   />
                 </div>
               </div>
@@ -208,7 +208,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   placeholder="How can I help you?"
-                  className="w-full bg-white dark:bg-[#111]/50 border border-gray-300 dark:border-white/10 rounded-none px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition-all"
+                  className="w-full bg-white dark:bg-[#111]/50 border border-gray-300 dark:border-white/10 rounded-none px-4 py-3 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition-all"
                 />
               </div>
 
@@ -221,7 +221,7 @@ const Contact = () => {
                   required
                   rows="5"
                   placeholder="Write your message here..."
-                  className="w-full bg-white dark:bg-[#111]/50 border border-gray-300 dark:border-white/10 rounded-none px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition-all resize-none"
+                  className="w-full bg-white dark:bg-[#111]/50 border border-gray-300 dark:border-white/10 rounded-none px-4 py-3 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition-all resize-none"
                 ></textarea>
               </div>
 
