@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiHtml5, SiCss, SiNodedotjs, SiPython, SiMongodb, SiMysql, SiGit, SiGithub, SiFigma, SiJavascript } from 'react-icons/si';
+import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiHtml5, SiCss, SiNodedotjs, SiPython, SiMongodb, SiMysql, SiGit, SiGithub, SiFigma, SiJavascript, SiSpringboot } from 'react-icons/si';
 import { FaJava, FaServer } from 'react-icons/fa';
 import { VscVscode } from 'react-icons/vsc';
 
@@ -9,7 +9,8 @@ const skillCategories = [
     name: 'Frontend',
     skills: [
       { name: 'React', Icon: SiReact, color: '#ffffff' },
-      // { name: 'Next.js', Icon: SiNextdotjs, color: '#ffffff' },
+      { name: 'Next.js', Icon: SiNextdotjs, color: '#ffffff' },
+      { name: 'JavaScript', Icon: SiJavascript, color: '#ffffff' },
       // { name: 'TypeScript', Icon: SiTypescript, color: '#ffffff' },
       { name: 'Tailwind CSS', Icon: SiTailwindcss, color: '#ffffff' },
       { name: 'HTML5', Icon: SiHtml5, color: '#ffffff' },
@@ -25,6 +26,7 @@ const skillCategories = [
       { name: 'JavaScript', Icon: SiJavascript, color: '#ffffff' },
       { name: 'Express.js', Icon: FaServer, color: '#ffffff' },
       { name: 'Java', Icon: FaJava, color: '#ffffff' },
+      { name: 'Spring Boot', Icon: SiSpringboot, color: '#ffffff' },
     ],
   },
   {
@@ -40,22 +42,11 @@ const skillCategories = [
   },
 ];
 
-const cardVariants = {
-  hidden: { opacity: 0, y: 30, scale: 0.95 },
-  visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.4, ease: 'easeOut' } },
-};
-
-const containerVariants = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.07 } },
-};
-
 const SkillCard = ({ name, Icon, color }) => (
   <motion.div
-    variants={cardVariants}
     whileHover={{ y: -6, scale: 1.06 }}
     transition={{ type: 'spring', stiffness: 280, damping: 20 }}
-    className="group flex flex-col items-center justify-center gap-3 bg-white dark:bg-[#050505] border border-gray-200 dark:border-white/10 rounded-none p-5 cursor-default hover:border-white/40 hover:bg-gray-50 dark:hover:bg-[#111] hover:shadow-[0_0_24px_rgba(255,255,255,0.08)] transition-all duration-300"
+    className="group flex flex-col items-center justify-center gap-3 bg-white dark:bg-[#050505] border border-gray-200 dark:border-white/10 rounded-none p-5 cursor-default hover:border-white/40 hover:bg-gray-50 dark:hover:bg-[#111] hover:shadow-[0_0_24px_rgba(255,255,255,0.08)] transition-all duration-300 shrink-0 w-[110px] sm:w-[130px] md:w-[150px] lg:w-[170px]"
   >
     <Icon size={40} style={{ color }} className="transition-transform duration-300 group-hover:scale-110 drop-shadow-sm" />
     <span className="text-sm font-medium text-gray-600 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors duration-200 text-center leading-tight">
@@ -97,29 +88,42 @@ const Skills = () => {
             <div key={catIdx}>
               {/* Category label + divider */}
               <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: -10 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4 }}
-                className="flex items-center gap-4 mb-8"
+                className="flex items-center justify-center gap-4 mb-8"
               >
                 <span className="text-sm font-normal dark:text-white text-gray-900 uppercase tracking-widest whitespace-nowrap">
                   {category.name}
                 </span>
               </motion.div>
 
-              {/* Cards grid */}
-              <motion.div
-                variants={containerVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.15 }}
-                className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4"
-              >
-                {category.skills.map((skill, idx) => (
-                  <SkillCard key={idx} name={skill.name} Icon={skill.Icon} color={skill.color} />
-                ))}
-              </motion.div>
+              {/* Cards container */}
+              <div className="overflow-hidden w-full relative group/marquee py-4">
+                <div className="flex w-max animate-marquee hover:[animation-play-state:paused]">
+                  {/* First identical half */}
+                  <div className="flex gap-4 pr-4">
+                    {[...Array(3)].map((_, i) => (
+                      <React.Fragment key={`first-${i}`}>
+                        {category.skills.map((skill, idx) => (
+                          <SkillCard key={`first-${i}-${idx}`} name={skill.name} Icon={skill.Icon} color={skill.color} />
+                        ))}
+                      </React.Fragment>
+                    ))}
+                  </div>
+                  {/* Second identical half */}
+                  <div className="flex gap-4 pr-4">
+                    {[...Array(3)].map((_, i) => (
+                      <React.Fragment key={`second-${i}`}>
+                        {category.skills.map((skill, idx) => (
+                          <SkillCard key={`second-${i}-${idx}`} name={skill.name} Icon={skill.Icon} color={skill.color} />
+                        ))}
+                      </React.Fragment>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           ))}
         </div>
