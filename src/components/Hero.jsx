@@ -27,18 +27,17 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-2xl md:text-3xl lg:text-4xl font-normal text-gray-800 dark:text-white mb-8 transition-colors uppercase"
+            className="text-xl md:text-2xl lg:text-3xl font-normal text-gray-800 dark:text-white mb-8 transition-colors uppercase whitespace-nowrap"
           >
-            I am {' '}
-            <span className="text-gray-900 dark:text-white bg-gray-100 dark:bg-white/10 px-2 py-1 rounded-none">
+            <span className="text-gray-900 dark:text-white bg-gray-100 dark:bg-white/10 px-4 py-2 rounded-none border-l-4 border-black dark:border-white shadow-sm">
               <Typewriter
                 words={heroData.roles}
                 loop={0}
                 cursor
-                cursorStyle='|'
-                typeSpeed={70}
-                deleteSpeed={50}
-                delaySpeed={1000}
+                cursorStyle='_'
+                typeSpeed={80}
+                deleteSpeed={60}
+                delaySpeed={2500}
               />
             </span>
           </motion.h2>

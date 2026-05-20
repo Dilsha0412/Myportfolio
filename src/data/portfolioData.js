@@ -2,12 +2,14 @@ import cvPdf from '../assets/Dilsha Jayasekara_ CV.pdf';
 import rabbitEcommerceImg from '../assets/rabbit-ecommerce.png';
 import coffeeShopImg from '../assets/coffee-shop.png';
 import sportivoImg from '../assets/sportivo.png';
+import kelaniyaImg from '../assets/Kelaniya.png';
+import tccImg from '../assets/images.jpg';
 
 export const heroData = {
   greeting: "WELCOME TO MY PORTFOLIO",
   firstName: "Dilsha",
   lastName: "Jayasekara",
-  roles: ["Software Engineer", "Full Stack Developer"],
+  roles: ["BUILDING DIGITAL EXPERIENCES"],
   description: "I am a passionate software engineer with a knack for building scalable web applications. I love combining modern aesthetics with robust backends to create delightful user experiences.",
   primaryCtaText: "View My Work",
   primaryCtaLink: "#projects",
@@ -29,7 +31,36 @@ export const aboutData = {
     "My goal is to create impactful digital solutions that solve real-world problems while delivering great user experiences."
   ],
   stats: [
-    { value: "3+", label: "Projects Completed" }
+    { value: "4+", label: "Projects Completed" }
+  ]
+};
+
+export const educationData = {
+  title: "EDUCATION",
+  education: [
+    {
+      id: 1,
+      degree: "BSc (Hons) in Software Engineering",
+      institution: "University of Kelaniya",
+      date: "2024 - Present",
+      icon: "UOK", // Placeholder for icon selection
+      image: kelaniyaImg,
+      details: [
+        "Current GPA: 3.58/4.0",
+        "Key Domains: Data Science, Net-Centric Web Applications, Health Informatics"
+      ]
+    },
+    {
+      id: 2,
+      degree: "G.C.E. Advanced Level in Physical Science",
+      institution: "Telijjawila Central College, Matara",
+      date: "Completed",
+      icon: "TCC",
+      image: tccImg,
+      details: [
+        "Z-score: 1.5045"
+      ]
+    }
   ]
 };
 
