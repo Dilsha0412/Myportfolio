@@ -1,12 +1,20 @@
 import React from 'react';
 import { FiDownload } from 'react-icons/fi';
 import { heroData } from '../data/portfolioData';
+import logo from '../assets/DJ.png';
 
 const Navbar = () => {
 
   return (
     <nav className="w-full fixed top-0 z-50 px-8 py-6 flex items-center justify-center bg-black transition-colors">
       
+      {/* Logo */}
+      <div className="absolute left-16">
+        <a href="#home">
+          <img src={logo} alt="DJ Logo" className="h-8 w-auto hover:scale-105 transition-transform duration-300" />
+        </a>
+      </div>
+
       {/* Navigation Links */}
       <div className="hidden md:flex items-center space-x-8 text-base md:text-lg font-normal text-gray-400 transition-colors">
         <a href="#home" className="relative hover:text-white transition-all duration-300 after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">Home</a>
@@ -18,7 +26,7 @@ const Navbar = () => {
       </div>
 
       {/* CV Download Button */}
-      <div className="absolute right-8">
+      <div className="absolute right-16">
         <a
           href={heroData.secondaryCtaLink}
           download="Dilsha_Jayasekara_CV.pdf"
