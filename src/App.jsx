@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
+import Education from './components/Education';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Blog from './components/Blog';
@@ -16,6 +17,8 @@ function App() {
       <Hero />
       <hr className="border-t border-white/20 mx-auto max-w-6xl" />
       <About />
+      <hr className="border-t border-white/20 mx-auto max-w-6xl" />
+      <Education />
       <hr className="border-t border-white/20 mx-auto max-w-6xl" />
       <Skills />
       <hr className="border-t border-white/20 mx-auto max-w-6xl" />
