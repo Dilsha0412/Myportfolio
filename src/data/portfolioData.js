@@ -4,6 +4,7 @@ import coffeeShopImg from '../assets/coffee-shop.png';
 import sportivoImg from '../assets/sportivo.png';
 import kelaniyaImg from '../assets/Kelaniya.png';
 import tccImg from '../assets/images.jpg';
+import bookfairImg from '../assets/bookfair.png';
 
 export const heroData = {
   greeting: "WELCOME TO MY PORTFOLIO",
@@ -109,9 +110,9 @@ export const projectsData = {
   projects: [
     {
       id: 1,
-      title: "Rabbit - Ecommerce Website with MERN",
+      title: "ELIX - Clothing E-Commerce Store",
       category: "Full Stack",
-      description: "A modern e-commerce platform for browsing, managing, and purchasing products with a seamless user experience.",
+      description: "A premium full-stack clothing e-commerce web application built with the MERN stack. Designed for browsing modern collections, managing inventory, and securing user purchases with a seamless interface.",
       image: rabbitEcommerceImg,
       tech: ["React", "Tailwind", "Express.js", "MongoDB"],
       githubUrl: "https://github.com/Dilsha0412/Rabbit-Ecommerce.git",
@@ -119,6 +120,16 @@ export const projectsData = {
     },
     {
       id: 2,
+      title: "Colombo Book Fair Stall Reservation System",
+      category: "Full Stack",
+      description: "A collaborative full-stack group project designed to automate stall bookings at the Colombo International Book Fair. Features an interactive floor plan mapper, real-time reservation systems, and automated booking receipts.",
+      image: bookfairImg,
+      tech: ["React", "Java", "MySQL", "Node.js"],
+      githubUrl: "https://github.com/Dilsha0412/sa-project",
+      //liveUrl: "https://example.com"
+    },
+    {
+      id: 3,
       title: "Sportivo Website",
       category: "Frontend",
       description: "A modern sports website featuring an energetic UI and dynamic design, highlighting sports gear and athletic achievements.",
@@ -128,7 +139,7 @@ export const projectsData = {
       //liveUrl: "https://example.com"
     },
     {
-      id: 3,
+      id: 4,
       title: "Coffee Shop Website ",
       category: "Frontend",
       description: "A simple coffee shop website for browsing and purchasing coffee items with a modern and responsive interface.",
@@ -137,16 +148,6 @@ export const projectsData = {
       githubUrl: "https://github.com/Dilsha0412/Coffee--Shop.git",
       //liveUrl: "https://example.com"
     },
-    /* {
-       id: 4,
-       title: "Portfolio Template",
-       category: "Frontend",
-       description: "A highly customizable and responsive portfolio template for developers and designers.",
-       image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=2055&auto=format&fit=crop",
-       tech: ["React", "Tailwind", "Framer Motion"],
-       githubUrl: "https://github.com",
-       liveUrl: "https://example.com"
-     } */
   ]
 };
 
