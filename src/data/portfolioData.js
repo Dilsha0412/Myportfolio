@@ -17,7 +17,7 @@ export const heroData = {
   secondaryCtaText: "Download CV",
   secondaryCtaLink: cvPdf,
   socialLinks: [
-    { name: "GitHub", url: "https://github.com", icon: "FaGithub" },
+    { name: "GitHub", url: "https://github.com/Dilsha0412", icon: "FaGithub" },
     { name: "LinkedIn", url: "https://linkedin.com", icon: "FaLinkedin" },
     { name: "Twitter", url: "https://x.com/dilsha0412", icon: "FaTwitter" },
   ]
@@ -159,7 +159,7 @@ export const contactData = {
   phone: "+94 77 522 7202",
   location: "Matara, Sri Lanka",
   socialLinks: [
-    { name: "GitHub", url: "https://github.com", icon: "FaGithub" },
+    { name: "GitHub", url: "https://github.com/Dilsha0412", icon: "FaGithub" },
     { name: "LinkedIn", url: "https://linkedin.com", icon: "FaLinkedin" },
     { name: "Twitter", url: "https://x.com/dilsha0412", icon: "FaTwitter" },
   ]
