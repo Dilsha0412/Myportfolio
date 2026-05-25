@@ -18,7 +18,7 @@ export const heroData = {
   secondaryCtaLink: cvPdf,
   socialLinks: [
     { name: "GitHub", url: "https://github.com/Dilsha0412", icon: "FaGithub" },
-    { name: "LinkedIn", url: "https://linkedin.com", icon: "FaLinkedin" },
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/dilsha-jayasekara-493127335/", icon: "FaLinkedin" },
     { name: "Twitter", url: "https://x.com/dilsha0412", icon: "FaTwitter" },
   ]
 };
@@ -160,7 +160,7 @@ export const contactData = {
   location: "Matara, Sri Lanka",
   socialLinks: [
     { name: "GitHub", url: "https://github.com/Dilsha0412", icon: "FaGithub" },
-    { name: "LinkedIn", url: "https://linkedin.com", icon: "FaLinkedin" },
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/dilsha-jayasekara-493127335/", icon: "FaLinkedin" },
     { name: "Twitter", url: "https://x.com/dilsha0412", icon: "FaTwitter" },
   ]
 };
