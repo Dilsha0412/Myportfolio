@@ -1,6 +1,6 @@
 import cvPdf from '../assets/Dilsha_Jayasekara_CV.pdf';
 import rabbitEcommerceImg from '../assets/rabbit-ecommerce.png';
-import coffeeShopImg from '../assets/coffee-shop.png';
+import playnexImg from '../assets/playnex.png';
 import sportivoImg from '../assets/sportivo.png';
 import kelaniyaImg from '../assets/Kelaniya.png';
 import tccImg from '../assets/images.jpg';
@@ -116,7 +116,7 @@ export const projectsData = {
       image: rabbitEcommerceImg,
       tech: ["React", "Tailwind", "Express.js", "MongoDB"],
       githubUrl: "https://github.com/Dilsha0412/Rabbit-Ecommerce.git",
-      //liveUrl: "https://example.com"
+      liveUrl: "https://elix-frontend.vercel.app/"
     },
     {
       id: 2,
@@ -129,6 +129,16 @@ export const projectsData = {
       //liveUrl: "https://example.com"
     },
     {
+      id: 4,
+      title: "PlayNex - Microservices Gaming Platform",
+      category: "Full Stack",
+      description: "A high-performance gaming platform engineered with a MERN stack and a microservices architecture. It features highly decoupled and scalable services for game catalogs, user authentication, and transaction processing, presented through a sleek cyber-gaming dashboard.",
+      image: playnexImg,
+      tech: ["React", "Node.js", "Express.js", "MongoDB", "Microservices"],
+      githubUrl: "https://github.com/Dilsha0412/playnex-microservices",
+      //liveUrl: "https://example.com"
+    },
+    {
       id: 3,
       title: "Sportivo Website",
       category: "Frontend",
@@ -138,16 +148,7 @@ export const projectsData = {
       githubUrl: "https://github.com/Dilsha0412/Sportivo-Website",
       //liveUrl: "https://example.com"
     },
-    {
-      id: 4,
-      title: "Coffee Shop Website ",
-      category: "Frontend",
-      description: "A simple coffee shop website for browsing and purchasing coffee items with a modern and responsive interface.",
-      image: coffeeShopImg,
-      tech: ["HTML", "CSS", "JavaScript"],
-      githubUrl: "https://github.com/Dilsha0412/Coffee--Shop.git",
-      //liveUrl: "https://example.com"
-    },
+
   ]
 };
 
@@ -188,12 +189,12 @@ export const blogData = {
     },
     {
       id: 2,
-      date: "Jun 23, 2025",
-      readTime: "2 min read",
-      title: "Building My First Simple OS in Assembly: Dill OS",
-      description: "Creating an operating system is one of the most exciting challenges for a systems programmer. As a passion project, I built a tiny but fully functional OS named Dill OS, written entirely in x86 assembly. It runs on real hardware (via BIOS) and can be tested using emulators like QEMU.",
-      tags: ["Assembly", "Operating System", "x86", "QEMU"],
-      link: "https://medium.com/@dilshajayasekara/%EF%B8%8F-building-my-first-simple-os-in-assembly-dill-os-c18d64d50505"
+      date: "May 20, 2026",
+      readTime: "5 min read",
+      title: "How to Structure a Scalable React Project: 2026 Guide",
+      description: "A comprehensive guide on structuring React projects for maximum scalability and maintainability, covering modern directory layouts, state management separation, and robust module design.",
+      tags: ["React", "Architecture", "Scalability", "Web Development"],
+      link: "https://medium.com/@dilshajayasekara/how-to-structure-a-scalable-react-project-2026-guide-ffb00df1b7c5"
     },
     {
       id: 3,
@@ -203,6 +204,15 @@ export const blogData = {
       description: "A comprehensive guide on implementing JWT authentication correctly, highlighting common mistakes and outlining best practices for secure applications.",
       tags: ["JWT", "Authentication", "Security", "Best Practices"],
       link: "https://medium.com/@dilshajayasekara/jwt-authentication-done-right-the-ultimate-guide-to-mistakes-and-best-practices-9fd28dc713d7"
+    },
+    {
+      id: 4,
+      date: "Jun 23, 2025",
+      readTime: "2 min read",
+      title: "Building My First Simple OS in Assembly: Dill OS",
+      description: "Creating an operating system is one of the most exciting challenges for a systems programmer. As a passion project, I built a tiny but fully functional OS named Dill OS, written entirely in x86 assembly. It runs on real hardware (via BIOS) and can be tested using emulators like QEMU.",
+      tags: ["Assembly", "Operating System", "x86", "QEMU"],
+      link: "https://medium.com/@dilshajayasekara/%EF%B8%8F-building-my-first-simple-os-in-assembly-dill-os-c18d64d50505"
     }
   ]
 };
