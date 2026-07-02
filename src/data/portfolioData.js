@@ -47,7 +47,7 @@ export const educationData = {
       icon: "UOK", // Placeholder for icon selection
       image: kelaniyaImg,
       details: [
-        "Current GPA: 3.58/4.0",
+        "Current GPA: 3.61/4.0",
         "Key Domains: Data Science, Net-Centric Web Applications, Health Informatics"
       ]
     },
