@@ -1,4 +1,4 @@
-import cvPdf from '../assets/Dilsha_Jayasekara_CV.pdf';
+import cvPdf from '../assets/Dilsha Jayasekara.CV.pdf';
 import rabbitEcommerceImg from '../assets/rabbit-ecommerce.png';
 import playnexImg from '../assets/playnex.png';
 import sportivoImg from '../assets/sportivo.png';
