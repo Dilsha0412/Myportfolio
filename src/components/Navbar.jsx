@@ -30,7 +30,7 @@ const Navbar = () => {
       <div className="absolute right-16">
         <a
           href={heroData.secondaryCtaLink}
-          download="Dilsha_Jayasekara_CV.pdf"
+          download="Dilsha_Jayasekara.CV.pdf"
           className="flex items-center gap-1.5 px-4 py-1.5 bg-transparent border border-white/30 hover:border-white text-white hover:bg-white hover:text-black font-normal rounded-none transition-all duration-300 tracking-wider text-xs hover:shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:scale-105 cursor-pointer"
         >
           <FiDownload className="text-base" />
